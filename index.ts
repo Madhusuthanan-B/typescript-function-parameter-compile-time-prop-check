@@ -4,7 +4,7 @@ interface ITime {
 
 class TimeSeries {
 
-    getTimes<T>(arg: T[]) {
+    getTimes<T extends ITime>(arg: T[]) {
         return {
             times: arg.map((x: any) => x.time)
         };
