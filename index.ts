@@ -1,6 +1,10 @@
+interface ITime {
+  time: number;
+}
+
 class TimeSeries {
 
-    getTimes(arg: any) {
+    getTimes<T>(arg: T[]) {
         return {
             times: arg.map((x: any) => x.time)
         };
