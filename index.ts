@@ -6,7 +6,7 @@ class TimeSeries {
 
     getTimes<T extends ITime>(arg: T[]) {
         return {
-            times: arg.map((x: any) => x.time)
+            times: arg.map((x: T) => x.time)
         };
     }
 }
